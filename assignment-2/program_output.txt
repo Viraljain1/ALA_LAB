@@ -1,0 +1,36 @@
+Token statistics
+  before preprocessing   : 320
+  after preprocessing    : 217
+  in-vocabulary          : 186
+  out-of-vocabulary      : 31
+  distinct OOV tokens    : anushree, behaviouraleconomics, biomedicalengineering, biomedicalresearch, cognitivebias, consumerbehaviour, energyharvesting, etztrn6c, ichtmr, ichtmr2026, inspiredbylife, karunakar, kotegar, lnkd, mahemanipal, maternalhealth, pxdvsh, researchatmahe, researchinmahe, shyampradeep, tanavi, wearabletech
+
+T.shape: (20, 50)
+W.shape: (186, 50)
+
+S.shape: (186, 20)
+np.allclose(S_vector, S_numpy, atol=1e-09): True
+np.max(np.abs(S_vector - S_numpy)): 4.440892098500626e-16
+
+Rank  Tag                       Score    Best-matching text word  Match
+-----------------------------------------------------------------------
+1     research                  1.000    research                 same word
+2     engineering               1.000    engineering              same word
+3     technology                1.000    technology               same word
+4     public health             0.947    health                   related word
+5     students                  0.882    student                  related word
+6     medicine                  0.872    medical                  related word
+7     campus                    0.847    school                   related word
+8     university                0.826    school                   related word
+
+3 of the top 8 tags were matched by the identical word, 5 by a different word.
+
+Ignoring exact matches, the closest text word for each top tag is:
+  research                  science             0.844
+  engineering               sciences            0.809
+  technology                research            0.774
+  public health             health              0.947
+  students                  student             0.882
+  medicine                  medical             0.872
+  campus                    school              0.847
+  university                school              0.826
